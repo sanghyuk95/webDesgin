@@ -43,22 +43,48 @@ a {
   width: 700px;
   height: 40px;
 }
-.gnb li {
+.gnb > li {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 25%;
   height: 100%;
   background-color: yellowgreen;
+  position: relative;
 }
-.gnb li:hover {
+.gnb > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.gnb > li > a:hover {
   background-color: violet;
 }
-.gnb ul {
-  display: flex;
+.gnb-sub {
+  width: 100%;
   position: absolute;
+  top: 40px;
+  z-index: 1;
+  background-color: yellowgreen;
+  height: 0;
+  transition: all 1s;
+  overflow: hidden;
 }
-
+.gnb-sub > li {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gnb-sub > li:hover {
+  background-color: violet;
+}
+.gnb > li:hover .gnb-sub {
+  height: 160px;
+}
 /* 슬라이드 */
 .slide {
   width: 100%;
