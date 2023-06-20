@@ -1,0 +1,177 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  color: #333;
+  background-color: #fff;
+}
+
+.wrap {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+/* 사이드바 */
+.sidebar {
+  width: 200px;
+  height: 850px;
+  background-color: yellowgreen;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sidebar-logo {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-logo > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+}
+.sidebar-logo > a > .img {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+.gnb {
+  margin: 0 auto;
+  width: 180px;
+  display: block;
+  position: relative;
+}
+.gnb > li {
+  width: 100%;
+  height: 40px;
+  background-color: tomato;
+  border: 1px solid #fff;
+}
+.gnb > li:hover {
+  background-color: thistle;
+}
+.gnb > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.subgnb {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 180px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  z-index: 99;
+}
+.gnb:hover .subgnb {
+  width: 100vw;
+}
+.subgnb > ul {
+  display: flex;
+  height: 40px;
+  margin-left: 50px;
+}
+.subgnb > ul > li {
+  width: 150px;
+  margin-right: 50px;
+}
+.subgnb > ul > li:hover {
+  background-color: violet;
+}
+.subgnb > ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* 메인 */
+.main {
+  width: calc(100% - 200px);
+  height: 850px;
+  margin-left: 200px;
+  position: relative;
+  display: block;
+}
+/* 슬라이드 */
+.slide {
+  width: 100%;
+  height: 400px;
+}
+.slidewrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slide-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 1s;
+  opacity: 0;
+}
+.slide-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.a {
+  background-color: red;
+  opacity: 1;
+}
+.b {
+  background-color: blue;
+}
+.c {
+  background-color: seagreen;
+}
+.quick {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: sandybrown;
+}
+.link {
+  width: 100%;
+  height: 200px;
+  background-color: sienna;
+}
+.content {
+  width: 100%;
+  height: 250px;
+  background-color: salmon;
+}
+/* 푸터 */
+.footer {
+  width: 100%;
+  height: 120px;
+  background-color: violet;
+}
